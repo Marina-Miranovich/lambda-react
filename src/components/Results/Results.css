@@ -1,0 +1,31 @@
+.youtube-results {
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px 0;
+  color: #f2f3f4;
+}
+.youtube-results__video-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+.youtube-results__video {
+  display: block;
+  width: 320px;
+  margin: 20px 0;
+}
+.youtube-results__video-image {
+  display: block;
+}
+.youtube-results__video-title {
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+  font-weight: normal;
+  font-size: 16px;
+  background: #131516;
+  color: #f2f3f4;
+}

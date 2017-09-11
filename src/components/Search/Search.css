@@ -1,0 +1,24 @@
+.youtube-search {
+  position: relative;
+  flex-grow: 1;
+}
+.youtube-search__input {
+  height: 74px;
+  width: 100%;
+  padding: 0 63px 0 20px;
+  font-size: 18px;
+  color: #f2f3f4;
+  background: #131516;
+  border: 0;
+  box-sizing: border-box;
+}
+.youtube-search__submit {
+  position: absolute;
+  top: 21px;
+  right: 17px;
+  font-size: 24px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
