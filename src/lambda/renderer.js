@@ -13,7 +13,11 @@ import '../index.css';
 import App from '../components/App/App';
 
 
-const HOST = 'http://localhost:3000';
+const LOCAL_URL_JS = 'http://localhost:3000/static/js/bundle.js'
+const AWS_URL_JS = 'https://s3.eu-central-1.amazonaws.com/lambda-react-demo-fronttalks/static/js/main.js';
+const bundleUrl = process.env.NODE_ENV === 'AWS' ? AWS_URL_JS : LOCAL_URL_JS;
+const host = process.env.NODE_ENV === 'AWS' ? 'https://s3.eu-central-1.amazonaws.com/lambda-react-demo-fronttalks' : 'http://localhost:3000' ;
+
 
 const generateHTML = (markup, styleTag, state) => (
   `<!doctype html>
@@ -22,7 +26,7 @@ const generateHTML = (markup, styleTag, state) => (
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
-    <link rel="shortcut icon" href="${HOST}/favicon.ico">
+    <link rel="shortcut icon" href="${host}/favicon.ico">
     ${styleTag}
     <title>FrontTlaks Videos</title>
   </head>
@@ -36,7 +40,7 @@ const generateHTML = (markup, styleTag, state) => (
         // http://redux.js.org/docs/recipes/ServerRendering.html#security-considerations
         window.__PRELOADED_STATE__ = ${JSON.stringify(state).replace(/</g, '\\u003c')}
       </script>
-    <script type="text/javascript" src="${HOST}/static/js/bundle.js"></script>
+    <script type="text/javascript" src="${bundleUrl}"></script>
   </body>
 </html>`
 );

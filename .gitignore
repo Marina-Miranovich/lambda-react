@@ -7,3 +7,9 @@ jspm_packages
 
 # Webpack directories
 .webpack
+
+# build directories
+client
+
+# system files
+.DS_Store
