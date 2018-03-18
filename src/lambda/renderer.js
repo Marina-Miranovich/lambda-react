@@ -48,7 +48,7 @@ const generateHTML = (markup, styleTag, state) => (
 const render = () => {
   const styleTag = collectInitial();
 
-  return api.search('cat').then((results) => {
+  return api.search('australian shepherd photo').then((results) => {
     const initialState = {
       isFetching: false,
       isError: false,
