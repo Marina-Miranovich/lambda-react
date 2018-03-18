@@ -13,3 +13,6 @@ client
 
 # system files
 .DS_Store
+
+# yarn logs
+yarn-error.log

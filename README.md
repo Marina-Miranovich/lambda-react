@@ -8,6 +8,7 @@ Built based on [Create React App](https://github.com/facebookincubator/create-re
 
 * Node.js `v6.5.0` or later.
 * Serverless CLI v1.9.0 or later. You can run `npm install -g serverless` to install it.
+* Yarn. Follow instrustions on the [official site](https://yarnpkg.com/en/docs/install) to install it.
 
 1. Clone the project to local folder;
 2. `$> yarn` to install dependencies;
