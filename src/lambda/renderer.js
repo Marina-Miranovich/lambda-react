@@ -36,10 +36,10 @@ const generateHTML = (markup, styleTag, state) => (
     </noscript>
     <div id="root">${markup}</div>
     <script>
-        // WARNING: See the following for security issues around embedding JSON in HTML:
-        // http://redux.js.org/docs/recipes/ServerRendering.html#security-considerations
-        window.__PRELOADED_STATE__ = ${JSON.stringify(state).replace(/</g, '\\u003c')}
-      </script>
+      // WARNING: See the following for security issues around embedding JSON in HTML:
+      // http://redux.js.org/docs/recipes/ServerRendering.html#security-considerations
+      window.__PRELOADED_STATE__ = ${JSON.stringify(state).replace(/</g, '\\u003c')}
+    </script>
     <script type="text/javascript" src="${bundleUrl}"></script>
   </body>
 </html>`

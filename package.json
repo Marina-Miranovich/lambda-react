@@ -4,8 +4,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "lambda": "NODE_ENV=\"development\" sls offline --port 8000 start",
-    "deploy:lambda": "NODE_ENV=\"development\" sls deploy",
+    "lambda": "sls offline --port 8000 start",
+    "deploy:lambda": "sls deploy",
     "deploy:static": "yarn build && sls client deploy --region eu-central-1",
     "deploy": "yarn deploy:lambda && yarn deploy:static"
   },

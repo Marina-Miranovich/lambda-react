@@ -1,5 +1,5 @@
 service:
-  name: lambda-react-demo-fronttalks
+  name: lambda-react-demo
 
 plugins:
   - serverless-webpack
@@ -22,6 +22,6 @@ functions:
           path: /
 
 custom:
-  webpack: "./webpack.config.js"
+  webpack: "./config/webpack.config.lambda.js"
   client:
-    bucketName: lambda-react-demo-fronttalks
+    bucketName: lambda-react-demo
